@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOMS</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- different way to linking the js -->
+    <!-- at start of html code -->
+
+    <!-- <script src="1_link_JS.js"></script> -->
+    
+    <!-- in this way to file goes to browser then it will start to parse and compile -->
+    <!-- the execution will stop while loading and compilation -->
+    <!-- but if the content is not found then it will stop and might give error so not appropriate way to do so  -->
+    
+    
+    <!-- another way : async -->
+    
+    <!-- <script src="1_link_JS.js" async></script> -->
+    
+    <!-- parsing and loading will happens parellay -->
+    <!-- but when the js file fully loaded then stop parsing of html and start execution of js -->
+    <!-- that's why might cause error -->
+    
+    
+    <!-- another way : defer -->
+    <!-- <script src="1_link_JS.js" defer></script> -->
+    
+    <!-- <script src="2_DOM.js" defer></script> -->
+    <script src="3_events.js" defer></script>
+
+
+    <!-- parsing and loading will happens simultenously -->
+    <!-- html parsing and loading will work simultenouly and also execution occurs -->
+    <!-- it's best way to link js file -->
+
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <h1 id="logo-home">Logo <span style="display:none;">Legos</span></h1>
+            <ul class="nav-items">
+                <li class="nav-item"><a href="#home">Home</a></li>
+                <li class="nav-item"><a href="">Contact</a></li>
+                <li class="nav-item"><a href="">About</a></li>
+            </ul>
+        </nav>
+        <div class="headline">
+            <h2>Manage Your Task</h2>
+            <button class="btn btn-headline">Learn More</button>
+        </div>
+    </header>
+    <section class="todo-section container">
+        <h2>What about today?</h2>
+        <form class="form-todo">
+            <input type="text" id="todo-input" placeholder="Add Todo">
+            <input type="submit" value="Add Todo" class="btn">
+        </form>
+    </section>
+
+    <section class="section-signup container">
+        <h2>Sign Up</h2>
+        <form class="signup-form">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" autocomplete="additional-name">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="text" id="confirmPassword" name="confirmPassword">
+            </div>
+            <div class="form-group">
+                <label for="Phone">Phone</label>
+                <input type="text" id="Phone" name="Phone" autocomplete="mobile">
+            </div>
+            <div class="form-group">
+                <label for="Email">Email</label>
+                <input type="text" id="Email" name="Email" autocomplete="email">
+            </div>
+            <div class="form-group">
+                <label for="about">About Your Self</label>
+                <textarea name="about" id="about" cols="30" rows="10"></textarea>
+            </div>
+            <button type="submit" class="signup-btn">Sign Up</button>
+            
+        </form>
+    </section>
+    <!-- at the end of html doc -->
+    <!-- html parse -->
+    <!-- js parse-> load -> executes -->
+    <!-- but still not better way -->
+    <!-- <script src="1_link_JS.js"></script> -->
+</body>
+</html>
